@@ -26,3 +26,4 @@ forge create NFT2 --rpc-url=$RPC_URL \
     --verify \
     --constructor-args myname2 mysymbol2
 
+forge test --gas-report
