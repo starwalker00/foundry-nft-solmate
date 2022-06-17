@@ -16,3 +16,13 @@ cast send --rpc-url=$RPC_URL 0xb3de220de2488071fc362141a939fb6689e0c52c \
     --private-key=$PRIVATE_KEY
 
 cast send --rpc-url=$RPC_URL 0xb3de220de2488071fc362141a939fb6689e0c52c "mintTo(address)" 0x235596F35fdeAc45a59bf38640dD68F19A85dE39 --private-key=$PRIVATE_KEY
+cast call --rpc-url=$RPC_URL --private-key=$PRIVATE_KEY <contractAddress> "ownerOf(uint256)" 1
+cast call --rpc-url=$RPC_URL --private-key=$PRIVATE_KEY 0xb3de220de2488071fc362141a939fb6689e0c52c "ownerOf(uint256)" 1
+
+forge test
+
+forge create NFT2 --rpc-url=$RPC_URL \
+    --private-key=$PRIVATE_KEY \
+    --verify \
+    --constructor-args myname2 mysymbol2
+
