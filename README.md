@@ -12,3 +12,11 @@ Features :
     - One shot interactions with deployed contract with cast
     - Python scripted interactions with deployed contract with cast
 
+# Resources
+
+    - https://book.getfoundry.sh/index.html
+    - https://github.com/crisgarner/awesome-foundry
+    - https://github.com/Openzeppelin/openzeppelin-contracts
+    - https://github.com/Rari-Capital/solmate
+    - https://gchq.github.io/CyberChef
+

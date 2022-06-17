@@ -11,11 +11,13 @@ import subprocess
 
 def main():
     """ Main entry point of the app """
-    for x in range(1, 4):
+    for x in range(1, 2):
         print(f"Iteration {x}")
         # build command
+        contract = "0xb3de220de2488071fc362141a939fb6689e0c52c"
+        mintTo = "0x235596F35fdeAc45a59bf38640dD68F19A85dE39"
         envCmd = ". ./.env.sh"
-        castCmd = "cast send --rpc-url=$RPC_URL 0xb3de220de2488071fc362141a939fb6689e0c52c \"mintTo(address)\" 0x235596F35fdeAc45a59bf38640dD68F19A85dE39 --private-key=$PRIVATE_KEY"
+        castCmd = "cast send --rpc-url=$RPC_URL "+contract+" \"mintTo(address)\" "+mintTo+" --private-key=$PRIVATE_KEY"
         fullCmd = [envCmd + "&&" + castCmd]
         proc = subprocess.Popen(fullCmd,stdout=open('python_logs.txt', 'a'),stderr=subprocess.PIPE, text=True, shell=True)
 
