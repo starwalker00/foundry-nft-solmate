@@ -10,3 +10,9 @@ forge create NFT --rpc-url=$RPC_URL \
     --verify \
     --constructor-args myname mysymbol
 
+cast send --rpc-url=$RPC_URL <contractAddress>  "mintTo(address)" <arg> --private-key=$PRIVATE_KEY
+cast send --rpc-url=$RPC_URL 0xb3de220de2488071fc362141a939fb6689e0c52c \
+    "mintTo(address)" 0x235596F35fdeAc45a59bf38640dD68F19A85dE39 \
+    --private-key=$PRIVATE_KEY
+
+cast send --rpc-url=$RPC_URL 0xb3de220de2488071fc362141a939fb6689e0c52c "mintTo(address)" 0x235596F35fdeAc45a59bf38640dD68F19A85dE39 --private-key=$PRIVATE_KEY
