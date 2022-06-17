@@ -1,0 +1,12 @@
+git init
+forge install \
+    Rari-Capital/solmate \
+    Openzeppelin/openzeppelin-contracts \
+    foundry-rs/forge-std
+forge build
+source .env.sh
+forge create NFT --rpc-url=$RPC_URL \
+    --private-key=$PRIVATE_KEY \
+    --verify \
+    --constructor-args myname mysymbol
+
