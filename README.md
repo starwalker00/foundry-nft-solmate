@@ -7,7 +7,7 @@ Features :
 
     - Use of GitHub Solidity librairies
     - Contract compilation
-    - Contract test
+    - Contract test (with cheatcodes)
     - Contract deployment and verification
     - One shot interactions with deployed contract with cast
     - Python scripted interactions with deployed contract with cast
